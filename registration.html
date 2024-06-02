@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 656px;
+            max-width: 500px;
+            width: 100%;
+            position: relative; 
+        }
+        .form-container {
+            position: absolute; 
+            top: 13px;
+            right: 13px;
+            width: 18px; 
+            height: auto;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tabs a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+            font-weight: bold;
+        }
+        .tabs a.active {
+            color: green;
+            border-bottom: 2px solid green;
+        }
+        .tabs a[href="#"]:not(.active) {
+            color: black; /* Логін чорний колір чому це не працює?! */
+            pointer-events: none; /* Вимкнення подій для неактивного логіна тільки воно не працює!!! */
+        }
+        .tabs a[href="#"]:last-child {
+            color: green; /* Реєстер зелений колір */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-login p {
+            margin: 20px 0 10px;
+            font-size: 14px;
+            color: #888;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: darkgreen;
+        }
+        .social-login {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-login p {
+            margin: 20px 0 10px;
+            font-size: 14px;
+            color: #888;
+        }
+        .social-login a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .social-login a img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <a href="#"><img src="images/Frame1.png" alt="close" width="18"></a>
+        </div>
+        <div class="tabs">
+            <a href="#" class="active">Login</a>
+            <a href="#" class="inactive">|</a>
+            <a href="#">Register</a>
+        </div>
+        <form>
+            <p>Enter your email and password to register.</p>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <div class="social-login">
+            <p>Or register with</p>
+            <a href="#"><img src="images/google1.jpg" alt="Google" width="20"> Continue with Google</a>
+            <a href="#"><img src="images/facebook1.jpg" alt="Facebook" width="20"> Continue with Facebook</a>
+        </div>
+    </div>
+</body>
+</html>
